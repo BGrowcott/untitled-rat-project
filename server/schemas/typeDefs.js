@@ -7,12 +7,21 @@ const typeDefs = gql`
         createdAt: String
     }
 
+    type User {
+        _id: ID!
+        name: String!
+        friends: [User]!
+    }
+
     type Query {
         rats: [Rat]
+        users: [User]
       }
 
     type Mutation {
         createRat(name: String!): Rat
+        createUser(name: String!): User
+        addFriend(friendId: ID!): User
     }
 `;
 
