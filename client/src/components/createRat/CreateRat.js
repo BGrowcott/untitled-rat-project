@@ -53,7 +53,7 @@ const Rat = () => {
       console.log(err);
     };
 
-    console.log("Rat function finished.")
+    console.log("Rat function finished - rat should now be in database.")
     setRatInput("");
   };
 
