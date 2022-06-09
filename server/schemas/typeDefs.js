@@ -7,12 +7,20 @@ const typeDefs = gql`
         createdAt: String
     }
 
-    type User{
+    type User {
         _id: ID!
         name: String!
         email: String!
         password: String!
         money: Int!
+    }
+
+    type ShopItem {
+        _id: ID!
+        itemName: String!
+        image: String!
+        description: String!
+        price: Int!
     }
 
     type Auth {
@@ -31,6 +39,7 @@ const typeDefs = gql`
         login(email: String!, password: String!): Auth
         addFriend(userID: String!, friendID: String!): User
         createRat(name: String!): Auth
+        createShopItem(itemName: String!, image: String!, description: String!, price: Int!)
     }
 `;
 
