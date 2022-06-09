@@ -1,23 +1,37 @@
 import React from "react";
-import RatCards from "../ratCards/RatCards";
-import rat1 from '../../images/rats/rat1.jpg'
-import rat2 from '../../images/rats/rat2.jpg'
+import { useQuery } from "@apollo/client";
+import { QUERY_RATS } from "../../utils/queries";
 
-const ChooseARat = () => {
-  const cards = [
-    {
-      title: <h3>Rattata</h3>,
-      image: <img style={{width:'200px'}} src={rat1} alt="RAT 1" />,
-    },
-    {
-      title: <h3>Raticate</h3>,
-      image: <img style={{width:'200px'}} src={rat2} alt="RAT 2" />,
-    },
-  ];
+import RatCards from "../ratCards/RatCards";
+import rat1 from "../../images/rats/rat1.jpg";
+import rat2 from "../../images/rats/rat2.jpg";
+
+const ChooseARat = async () => {
+  const { loading, data } = useQuery(QUERY_RATS);
+
+  const ratData = data?.rats;
+  console.log("Rat Data length:")
+  
+  if (rataData) {
+    console.log(ratData.length);
+  } else {
+    console.log("No rat data");
+  }
+
+  const ratNames = ratData.map((rat) => (rat.name));
+
+  const ratCards = ratNames.map((rat) => getRatCard(rat));
+
+  console.log(ratCards + "This is the ratcards in the Choose A Rat file");
+  const getRatCard = (ratName) => {
+    return {
+      title: ratName
+    }
+    };
 
   return (
     <div>
-      <RatCards cards = {cards} />
+      <RatCards cards={ratCards} />
     </div>
   );
 };

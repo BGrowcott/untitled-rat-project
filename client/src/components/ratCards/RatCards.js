@@ -15,10 +15,9 @@ const Cards = (props) => {
   return (
     <div>
       <ul className="cards-container" style = {styles.cardsContainer}>
-        {props.cards.map((card, index) => (
+        {props.ratCards.map((ratCards, index) => (
           <li key={index} className="card">
-            {card.title}
-            {card.image}
+            <h3>{ratCards.ratName}</h3>
           </li>
         ))}
       </ul>
@@ -27,3 +26,7 @@ const Cards = (props) => {
 };
 
 export default Cards;
+// {card.image}
+//         title: <h3>{ratName}</h3>,
+//         image: <img style={{ width: "200px" }} src={rat1} alt="RAT 1" />,
+//       },

@@ -19,22 +19,22 @@ function MyRats() {
 
   function renderMenuChoice() {
     switch (sideMenuChoice) {
-//       case "allRats":
-//         return <AllRats />;
-//       case "shop":
-//         return <Shop />;
-//       case "jobs":
-//         return <Jobs />;
-      case 'allRats':
-        return <AllRats/>;
-      case 'shop':
-        return <Shop/>;
-      case 'jobs':
-        return <Jobs/>;
-      case 'cemetery':
-        return <Cemetery/>
-        case 'myFriends':
-          return <MyFriends/>
+      //       case "allRats":
+      //         return <AllRats />;
+      //       case "shop":
+      //         return <Shop />;
+      //       case "jobs":
+      //         return <Jobs />;
+      case "allRats":
+        return <AllRats />;
+      case "shop":
+        return <Shop />;
+      case "jobs":
+        return <Jobs />;
+      case "cemetery":
+        return <Cemetery />;
+      case "myFriends":
+        return <MyFriends />;
     }
   }
 
@@ -47,7 +47,6 @@ function MyRats() {
       <aside style={styles.aside}>
         <h2>User Name</h2>
         <ul>
-
           <li data-page="allRats" onClick={sideMenuSelection}>
             <button data-page="allRats">My Rats</button>
           </li>
@@ -57,8 +56,12 @@ function MyRats() {
           <li data-page="jobs" onClick={sideMenuSelection}>
             <button data-page="jobs">Jobs</button>
           </li>
-          <li data-page='cemetery' onClick={sideMenuSelection}><button data-page='cemetery'>Cemetery</button></li>
-          <li data-page='myFriends' onClick={sideMenuSelection}><button data-page='myFriends'>My Friends</button></li>
+          <li data-page="cemetery" onClick={sideMenuSelection}>
+            <button data-page="cemetery">Cemetery</button>
+          </li>
+          <li data-page="myFriends" onClick={sideMenuSelection}>
+            <button data-page="myFriends">My Friends</button>
+          </li>
         </ul>
       </aside>
       {renderMenuChoice()}
