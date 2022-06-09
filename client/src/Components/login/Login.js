@@ -1,14 +1,6 @@
 import React from "react";
 import "./css/styles.css";
 const styles = {
-  body: {
-    width: "350px",
-    height: "500px",
-    background: "grey",
-    overflow: "hidden",
-    borderRadius: "10px",
-    boxShadow: "5px 20px 50px #000",
-  },
   signup: {
     height: "460px",
     background: "rgb(250, 250, 250)",
@@ -67,17 +59,17 @@ const styles = {
     borderRadius: "5px",
     transition: "0.2s ease-in",
     cursor: "pointer",
-  },
+  }
 };
 function Login() {
   return (
-    <body>
+    <div>
       <div>
         <div style={styles.signup}>
           <form style={styles.form}>
-            <label style={styles.label} aria-hidden="true">
+            <h2 style={styles.label} aria-hidden="true">
               Sign up
-            </label>
+            </h2>
             <input
               style={styles.input}
               type="text"
@@ -106,9 +98,9 @@ function Login() {
       <div>
         <div style={styles.login}>
           <form style={styles.form}>
-            <label style={styles.label} aria-hidden="true">
+            <h2 style={styles.label} aria-hidden="true">
               Login
-            </label>
+            </h2>
             <input
               style={styles.input}
               type="email"
@@ -127,7 +119,7 @@ function Login() {
           </form>
         </div>
       </div>
-    </body>
+    </div>
   );
 }
 export default Login;
