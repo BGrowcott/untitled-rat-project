@@ -8,10 +8,15 @@ function Shop() {
   const { loading, data } = useQuery(QUERY_SHOP);
   const itemList = data?.shopItems || [];
  
-  
+  const styles = {
+      container: {
+          display: 'flex',
+          justifyContent: 'space-around'
+      }
+  }
 
   return (
-    <div>
+    <div style={styles.container}>
       {itemList.map((item, index) => (
         <ShopCard
           key={index}
