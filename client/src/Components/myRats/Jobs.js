@@ -30,7 +30,7 @@ function Jobs() {
           />
         </div>
         <div>
-          <h3>Job Description</h3>
+          <h4>Job Description</h4>
           <p>Rat job descriptions...</p>
         </div>
       </section>

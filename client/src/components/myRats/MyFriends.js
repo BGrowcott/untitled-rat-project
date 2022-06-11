@@ -1,45 +1,46 @@
 import React, { useState, useRef, useEffect } from "react";
 import LoadFriends from "./LoadFriends";
 
+const styles = {
+  flex: {
+    textAlign: "center",
+  },
+  friendImage: {
+    border: "1px solid",
+    boxShadow: "5px 5px gray",
+    padding: "50px",
+    borderRadius: "50%",
+  },
+  friendTitle: {
+    textAlign: "center",
+  },
+  section: {
+    marginTop: "100px",
+    marginBottom: "100px",
+  },
+  addFriend: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    border: "1px solid",
+    boxShadow: "5px 5px gray",
+    padding: "20px 100px 20px 100px",
+  },
+  input: {
+    width: "250px",
+    height: "30px",
+    marginRight: "10px",
+  },
+  btn: {
+    height: "30px",
+    cursor: "pointer",
+  },
+  inputBtn: {
+    marginTop: "40px",
+    marginLeft: "20px",
+  },
+};
+
 const MyFriends = () => {
-  const styles = {
-    flex: {
-      textAlign: "center",
-    },
-    friendImage: {
-      border: "1px solid",
-      boxShadow: "5px 5px gray",
-      padding: "50px",
-      borderRadius: "50%",
-    },
-    friendTitle: {
-      textAlign: "center",
-    },
-    section: {
-      marginTop: "100px",
-      marginBottom: "100px",
-    },
-    addFriend: {
-      display: "flex",
-      justifyContent: "space-evenly",
-      border: "1px solid",
-      boxShadow: "5px 5px gray",
-      padding: "20px 100px 20px 100px",
-    },
-    input: {
-      width: "250px",
-      height: "30px",
-      marginRight: "10px",
-    },
-    btn: {
-      height: "30px",
-      cursor: "pointer",
-    },
-    inputBtn: {
-      marginTop: "40px",
-      marginLeft: "20px",
-    },
-  };
 
   const [addFriend, setAddFriend] = useState();
   const addFriendRef = useRef();

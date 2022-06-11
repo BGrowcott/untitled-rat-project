@@ -1,20 +1,21 @@
 import React from "react";
 
+const styles = {
+  deadRat: {
+    textAlign: "center"
+  },
+img: {
+    width: "60%"
+  },
+text: {
+    fontSize: "18px"
+},
+rip: {
+    fontSize: "30px"
+}
+};
+
 const Cemetery = () => {
-  const styles = {
-      deadRat: {
-        textAlign: "center"
-      },
-    img: {
-        width: "60%"
-      },
-    text: {
-        fontSize: "18px"
-    },
-    rip: {
-        fontSize: "30px"
-    }
-  };
 
   return (
     <section>
