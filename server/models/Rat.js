@@ -18,6 +18,10 @@ const ratSchema = new Schema({
   job: {
     type: Schema.Types.ObjectId, 
     ref: "jobs"
+  },
+  attendedWork: {
+    type: Date,
+    required: false
   }
 });
 

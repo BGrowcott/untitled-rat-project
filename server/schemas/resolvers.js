@@ -114,6 +114,14 @@ const resolvers = {
       await rat.save()
       return rat
     },
+
+    goToWork: async (parent, {ratId}) => {
+      const rat = await Rat.findById(ratId);
+      rat.attendedWork = Date.now()
+      await rat.save()
+      return rat
+    }
+
   },
 };
 

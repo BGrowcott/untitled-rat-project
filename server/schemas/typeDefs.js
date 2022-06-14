@@ -57,6 +57,7 @@ const typeDefs = gql`
         getJob(jobName: String!, image: String!, description: String!, wages: Int! ): Jobs
         buyItem(userID: String!, itemID: String!): User
         applyForJob(ratId: String!, jobId: String!): Rat
+        goToWork(ratId: String!): Rat
     }
 `;
 

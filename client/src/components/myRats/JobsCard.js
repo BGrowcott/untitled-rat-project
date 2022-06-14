@@ -40,3 +40,4 @@ function JobsCard({ id, jobName, image, description, wages }) {
 }
 
 export default JobsCard;
+
