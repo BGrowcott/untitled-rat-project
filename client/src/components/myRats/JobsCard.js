@@ -22,15 +22,14 @@ const styles = {
 };
 
 function JobsCard({ id, jobName, image, description, wages, nameArray }) {
-  const [jobApplication, {error}] = useMutation(JOB_APPLICATION)
+  const [apply, {error}] = useMutation(JOB_APPLICATION)
 
   async function applyJobHandler(e){
-    console.log($('#rat-select').val())
     const ratId = $('#rat-select').val()
     const jobId = e.target.dataset.id
     try {
       const {data} = await jobApplication({
-        variables: { ratId:ratId, jobId:jobId }
+        variables: { ratId: $ratId, jobId:jobId }
       })
     } catch(err){console.log(err)}
   }
@@ -51,7 +50,7 @@ function JobsCard({ id, jobName, image, description, wages, nameArray }) {
         </div>
         <select id="rat-select">
         {nameArray.map((rat, index) => (
-          <option key={index} value={rat._id} label={rat.name}></option>
+          <option key={index} value={rat.id}>{rat.name}</option>
       ))}
         </select>
         <button data-id={id} onClick={applyJobHandler}>Apply</button>

@@ -18,6 +18,7 @@ import Signup from "./components/login/Signup";
 import Cemetery from "./components/myRats/Cemetery";
 import MyFriends from "./components/myRats/MyFriends";
 import Progress from "./components/progress/Progress";
+import GotTheJob from "./components/myRats/GotTheJob";
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -52,6 +53,7 @@ function App() {
           <Route path="/cemetery" element={<Cemetery />} />
           <Route path="/myfriends" element={<MyFriends />} />
           <Route path="/progress" element={<Progress />} />
+          <Route path="/job" element={<GotTheJob />} />
         </Routes>
         <Footer />
       </Router>
