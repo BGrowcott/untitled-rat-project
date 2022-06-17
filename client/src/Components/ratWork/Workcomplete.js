@@ -1,6 +1,6 @@
 import React from "react";
 import './workcomplete.css';
-import cartoon from "../../images/cartoons/cartoon.png";
+import sleeping from "../../images/cartoons/sleeping.png";
 
 function Workcomplete() {
     return (
@@ -13,7 +13,7 @@ function Workcomplete() {
 </div>
 
             
-            <img src={cartoon} className="rat" alt="" />
+            <img src={sleeping} className="rat" alt="" />
 
             <p>[RATNAME] is fast asleep. They have already worked so hard today, maybe you should let them rest. Come back tomorrow</p>
 
