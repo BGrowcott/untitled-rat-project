@@ -1,19 +1,22 @@
 import React from "react";
-import './cartoon.css';
+import './workcomplete.css';
 import cartoon from "../../images/cartoons/cartoon.png";
 
-function Cartoon() {
+function Workcomplete() {
     return (
         
-        <div className="cartoon">
+        <div className="workcomplete">
            
             <div className="testingMore">
-  <h1> Search the Trash Can</h1>
+
 
 </div>
 
             
-            <img src={cartoon} className="cartoon" alt="" />
+            <img src={cartoon} className="rat" alt="" />
+
+            <p>[RATNAME] is fast asleep. They have already worked so hard today, maybe you should let them rest. Come back tomorrow</p>
+
             <button className="btn btn-secondary">search</button>
            
   </div>
@@ -23,4 +26,4 @@ function Cartoon() {
     );
 }
 
-export default Cartoon ;
+export default Workcomplete ;
