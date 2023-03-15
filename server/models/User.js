@@ -22,7 +22,7 @@ const userSchema = new Schema(
       type: String,
       required: [true],
     },
-    friends: [{ type: Schema.Types.ObjectId, ref: "Users" }],
+    friends: [{ type: Schema.Types.ObjectId, ref: "user" }],
     money: {
       type: Number,
       required: true,
@@ -58,6 +58,6 @@ userSchema.methods.isCorrectPassword = async function (password) {
 return bcrypt.compare(password, this.password);
 };
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('user', userSchema);
 
 module.exports = User;

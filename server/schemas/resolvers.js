@@ -95,13 +95,11 @@ const resolvers = {
       parent,
       { userId, name, headIndex, bodyIndex, bumIndex }
     ) => {
-      console.log("Reached here");
       const newRat = await Rat.create({ name, headIndex, bodyIndex, bumIndex });
       const user = await User.findOneAndUpdate(
         { _id: userId },
         { $addToSet: { rats: newRat._id } }
       );
-      console.log(user);
       return user;
     },
 
@@ -145,7 +143,6 @@ const resolvers = {
     },
 
     applyForJob: async (parent, { ratId, jobId }) => {
-      console.log(ratId, jobId);
       const rat = await Rat.findById(ratId);
       rat.job = jobId;
       await rat.save();

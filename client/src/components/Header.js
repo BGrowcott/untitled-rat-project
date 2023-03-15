@@ -31,9 +31,8 @@ const Header = () => {
         </div>
         {Auth.loggedIn() ? (
           <div className="nav-links">
-            <a href="/">Home</a>
-            <a href="/myrats">My Rats</a>
-            <a href="/myfriends">My Friends</a>
+            <Link to={"/myrats"}>My Rats</Link>
+            <Link to={"/myfriends"}>My Friends</Link>
             <button onClick={logout} style={styles.navButton} className="btn btn-secondary m=1">Logout</button>
           </div>          
           ) : (

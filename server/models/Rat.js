@@ -116,13 +116,15 @@ const rattributesArray = [
 
 ratSchema.pre("save", function (next) {
   // Select 5 rattributes at random
-  const assignedRattributes = rattributesArray.sort(() => 0.5 - Math.random()).slice(0, 5);
-  this.rattributes = assignedRattributes;
-  this.mazeSolving = Math.floor(Math.random() * 5) + 1
-  this.speed = Math.floor(Math.random() * 5) + 1
-  this.trapAvoidance = Math.floor(Math.random() * 5) + 1
-  this.magic = Math.floor(Math.random() * 5) + 1
-  next();
+  if (this.isNew) {
+    const assignedRattributes = rattributesArray.sort(() => 0.5 - Math.random()).slice(0, 5);
+    this.rattributes = assignedRattributes;
+    this.mazeSolving = Math.floor(Math.random() * 5) + 1
+    this.speed = Math.floor(Math.random() * 5) + 1
+    this.trapAvoidance = Math.floor(Math.random() * 5) + 1
+    this.magic = Math.floor(Math.random() * 5) + 1
+    next();
+  }
 });
 
 // This virtual didn't work, so Kenny suggested I do this in the resolver instead.

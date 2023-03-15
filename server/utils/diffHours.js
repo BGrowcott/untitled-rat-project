@@ -10,4 +10,4 @@ function diff_hours(date)
 date = new Date("May 31, 2022 11:49:00");
 console.log(diff_hours(date));
 
-module.exports = diffHours;
+module.exports = diff_hours;
